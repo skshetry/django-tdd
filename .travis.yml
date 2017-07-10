@@ -1,9 +1,10 @@
 language: python
+python: "3.7-dev"
 sudo: true
 dist: trusty
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y chromium
+  - sudo apt-get install -y chromium-browser
 install: pip install -r requirements.txt
 script: 
   -python superlists/manage.py test
